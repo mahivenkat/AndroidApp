@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -40,6 +41,21 @@ public class MainActivity extends AppCompatActivity {
         TextView textView = findViewById(R.id.txtMessage);
         textView.setText("KV....");
 
+    }
+
+    public void onShowBtnClick(View view){
+       EditText firstName = findViewById(R.id.firstName);
+       TextView firstNameTxt = findViewById(R.id.txtFirstName);
+       firstNameTxt.setText("Entered firstName: " +firstName.getText().toString());
+
+        EditText lastName = findViewById(R.id.lastName);
+        TextView lastNameTxt = findViewById(R.id.txtLastName);
+        lastNameTxt.setText("Entered lastName: " +lastName.getText().toString());
+
+
+        EditText email = findViewById(R.id.email);
+        TextView emailTxt = findViewById(R.id.txtEmail);
+        emailTxt.setText("Entered email: " +email.getText().toString());
     }
 
 }
